@@ -1,0 +1,10 @@
+*~
+build/
+bin/
+node_modules/
+bower_components/
+vendor/
+Thumbs.db
+.project
+.settings
+configuration.json

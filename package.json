@@ -1,0 +1,9 @@
+{
+  "name": "generator-test",
+  "version": "0.0.1",
+  "description": "My first generator",
+  "keywords": ["yeoman-generator"],
+  "dependencies": {
+    "yeoman-generator": "^0.17"
+  }
+}
