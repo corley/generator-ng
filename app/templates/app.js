@@ -1,16 +1,16 @@
 angular.module(
         '<%= appname %>',
-        [ 
+        [
             'templates-common', <% if (uiRouter) { %>
             'ui.router', <% } %><% if (ngCookie) { %>
-            'ngCookies', <% } %><% if (ngUtils) { %> 
+            'ngCookies', <% } %><% if (ngUtils) { %>
             'cr-session',
             'cr-auth', <% } %>
             'templates-app'
         ]
 )
 .config(function myAppConfig($urlRouterProvider) {
-    $urlRouterProvider.otherwise('/home'); 
+    $urlRouterProvider.otherwise('/home');
 })
 .run(function run() {
 
@@ -20,5 +20,4 @@ angular.module(
     });
     $scope.$on('$stateChangeStart', function(event, toState, toParams, fromState, fromParams) {
     });
-})
-;
+});

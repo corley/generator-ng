@@ -40,8 +40,8 @@ module.exports = yeoman.generators.Base.extend({
         }];
 
         this.prompt(prompts, function (props) {
-            var hasMod = function (mod) { 
-                return props.modules.indexOf(mod) !== -1; 
+            var hasMod = function (mod) {
+                return props.modules.indexOf(mod) !== -1;
             };
             this.bootstrap = hasMod('Bootstrap');
             this.ngResource = hasMod('ngResource');
@@ -51,17 +51,25 @@ module.exports = yeoman.generators.Base.extend({
             cb();
         }.bind(this));
     },
-    init: function () {
+    initApplication: function () {
         this.copy('gitignore', '.gitignore');
         this.template('bower.json');
         this.copy('Gruntfile.js', 'Gruntfile.js');
         this.copy('module.prefix', 'module.prefix');
         this.copy('module.suffix', 'module.suffix');
         this.copy('configuration.json.dist', 'configuration.json');
+        this.copy('build.config.js', 'build.config.js');
         this.mkdir("src");
         this.mkdir("src/app");
         this.template('package.json');
-        this.template('app.js', "src/app/app.js");
+        /*************************
+         * Don't read this lines *
+         ************************/
+        this.styles = '<% styles.forEach( function ( file ) { %><link rel="stylesheet" type="text/css" href="<%= file %>" /><% }); %>';
+        this.scripts = '<% scripts.forEach( function ( file ) { %><script type="text/javascript" src="<%= file %>"></script><% }); %>';
+        this.template('index.html', 'src/index.html');
+
+        this.template('app.js', "src/app.js");
         this.mkdir("karma");
         this.copy('karma-unit.tpl.js', 'karma/karma-unit.tpl.js');
     },
