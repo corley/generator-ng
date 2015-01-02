@@ -43,7 +43,7 @@ module.exports = yeoman.generators.Base.extend({
             var hasMod = function (mod) {
                 return props.modules.indexOf(mod) !== -1;
             };
-            this.bootstrap = hasMod('Bootstrap');
+            this.bootstrap = hasMod('bootstrap');
             this.ngResource = hasMod('ngResource');
             this.uiRouter = hasMod('uiRouter');
             this.ngCookie= hasMod('ngCookie');
@@ -58,7 +58,7 @@ module.exports = yeoman.generators.Base.extend({
         this.copy('module.prefix', 'module.prefix');
         this.copy('module.suffix', 'module.suffix');
         this.copy('configuration.json.dist', 'configuration.json');
-        this.copy('build.config.js', 'build.config.js');
+        this.template('build.config.js', 'build.config.js');
         this.mkdir("src");
         this.mkdir("src/app");
         this.template('package.json');
