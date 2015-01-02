@@ -1,9 +1,9 @@
 {
-  "name": "generator-test",
+  "name": "generator-ng",
   "version": "0.0.1",
-  "description": "My first generator",
-  "keywords": ["yeoman-generator"],
+  "description": "Generator of AngularJs boilerplate",
+  "keywords": ["yeoman-generator", "AngularJS", "ng", "single page app"],
   "dependencies": {
-    "yeoman-generator": "^0.17"
+    "yeoman-generator": "~0.18"
   }
 }
