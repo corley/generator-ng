@@ -57,14 +57,20 @@ module.exports = {
    * recommended that you use wildcards.
    */
   vendor_files: {
-    js: [<% if (bootstrap) { %>
+    js: [
+        'bower_components/angular/angular.js',<% if (bootstrap) { %>
         'bower_components/jquery/dist/jquery.js',
         'bower_components/bootstrap/dist/js/bootstrap.js',<% } %><% if (uiRouter) { %>
         'bower_components/angular-ui-router/release/angular-ui-router.js',
         'bower_components/angular-ui-utils/modules/route/route.js',<% } %><% if (ngCookie) { %>
         'bower_components/angular-cookies/angular-cookies.js',<% } %><% if(ngUtils) { %>
+        'bower_components/aws-sdk/dist/aws-sdk.js',
+        'bower_components/cognitojs/dist/amazon-cognito.min.js',
+        'bower_components/angular-local-storage/dist/angular-local-storage.js',
+        'bower_components/cr-session/cr-session.js',
+        'bower_components/cr-remote/cr-remote.js',
+        'bower_components/cr-aws/cr-aws.js',
         'bower_components/cr-auth/cr-auth.js',<% } %>
-        'bower_components/angular/angular.js'
     ],
     css: [
     ],

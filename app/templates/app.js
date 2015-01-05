@@ -4,8 +4,10 @@ angular.module(
             'templates-common', <% if (uiRouter) { %>
             'ui.router', <% } %><% if (ngCookie) { %>
             'ngCookies', <% } %><% if (ngUtils) { %>
-            'cr-session',
-            'cr-auth', <% } %>
+            'cr.session',
+            'cr.remote',
+            'cr.aws'
+            'cr.auth', <% } %>
             'templates-app'
         ]
 )

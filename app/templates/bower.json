@@ -10,6 +10,9 @@
     "angular-ui-router": "~0.2.11",
     "angular-ui-utils": "~0.1.0", <% } %><% if (ngCookie) { %>
     "angular-cookies": "~1.3", <% } %> <% if (ngUtils) { %>
+    "cr-session": "*",
+    "cr-aws": "*",
+    "cr-remote": "*",
     "cr-auth": "*",<% } %>
     "angular": "~1.3"
   }
