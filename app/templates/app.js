@@ -6,7 +6,7 @@ angular.module(
             'ngCookies', <% } %><% if (ngUtils) { %>
             'cr.session',
             'cr.remote',
-            'cr.aws'
+            'cr.aws',
             'cr.auth', <% } %>
             'templates-app'
         ]
