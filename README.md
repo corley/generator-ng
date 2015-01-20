@@ -1,4 +1,4 @@
-# generator-ng
+# generator-ngpp
 Yeoman generator for AngularJs boilerplate
 
 ## Install
