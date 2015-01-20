@@ -1,5 +1,5 @@
 {
-  "name": "generator-ng",
+  "name": "generator-ngapp",
   "version": "0.0.1",
   "description": "Generator of AngularJs boilerplate",
   "keywords": ["yeoman-generator", "AngularJS", "ng", "single page app"],

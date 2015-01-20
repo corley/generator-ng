@@ -2,10 +2,10 @@
 Yeoman generator for AngularJs boilerplate
 
 ## Install
-npm install generator-ng
+npm install generator-ngapp
 
 ## Use it
 Create application
 ```bash
-yo ng
+yo ngapp
 ```

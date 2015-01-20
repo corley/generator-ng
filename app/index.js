@@ -83,7 +83,7 @@ module.exports = yeoman.generators.Base.extend({
         this.prompt(prompts, function (answers) {
             console.log(answers.generateHomeModule);
             if (answers.generateHomeModule == true) {
-                this.invoke('ng:module', {
+                this.invoke('ngapp:module', {
                     arguments: ['home']
                 });
             }

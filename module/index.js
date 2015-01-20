@@ -14,7 +14,7 @@ module.exports = yeoman.generators.Base.extend({
             message : "Would you create base controller?",
         }], function(answers) {
             if (answers.createController){
-                this.invoke("ng:controller", {
+                this.invoke("ngapp:controller", {
                     arguments: [this.moduleName]
                 });
             }
